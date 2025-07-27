@@ -350,26 +350,54 @@ idf.py monitor
 ## 项目结构
 
 ```
-├── main/
-│   ├── include/           # 头文件
-│   │   ├── audio_delay.h
-│   │   ├── ec11_encoder.h
-│   │   ├── oled_display.h
-│   │   ├── settings_manager.h
-│   │   └── ui_manager.h
-│   ├── main.c            # 主程序
-│   ├── audio_delay.c     # 音频延迟处理
-│   ├── ec11_encoder.c    # EC11编码器驱动
-│   ├── oled_display.c    # OLED显示驱动
-│   ├── settings_manager.c # 设置管理
-│   ├── ui_manager.c      # 用户界面管理
-│   └── CMakeLists.txt
-├── CMakeLists.txt        # 项目配置
-├── sdkconfig.defaults    # 默认配置
-├── build_and_flash.sh    # 构建脚本
-├── software_requirements.md # 软件需求文档
-└── README.md            # 项目说明
+audio-delay/
+├── main/                           # 主要源代码目录
+│   ├── include/                    # 头文件目录
+│   │   ├── audio_delay.h           # 音频延迟处理头文件
+│   │   ├── ec11_encoder.h          # EC11 旋转编码器头文件
+│   │   ├── es8388_driver.h         # ES8388 音频编解码器头文件
+│   │   ├── oled_display.h          # OLED 显示屏头文件
+│   │   ├── settings_manager.h      # 设置管理头文件
+│   │   └── ui_manager.h            # 用户界面管理头文件
+│   ├── main.c                      # 主程序入口
+│   ├── audio_delay.c               # 音频延迟处理核心模块
+│   ├── ec11_encoder.c              # EC11 旋转编码器驱动
+│   ├── es8388_driver.c             # ES8388 音频编解码器驱动
+│   ├── oled_display.c              # OLED 显示屏驱动
+│   ├── settings_manager.c          # 设置管理模块
+│   ├── ui_manager.c                # 用户界面管理
+│   └── CMakeLists.txt              # 主模块构建配置
+├── README_images/                  # 文档图片资源
+│   └── AI Thinker esp32-A1S ES8388.png  # 引脚定义图
+├── build/                          # 构建输出目录 (自动生成)
+│   ├── esp32_audio_delay.bin       # 固件二进制文件
+│   ├── esp32_audio_delay.elf       # ELF 可执行文件
+│   └── ...                         # 其他构建产物
+├── CMakeLists.txt                  # 项目根构建配置
+├── sdkconfig                       # ESP-IDF 配置文件
+├── sdkconfig.defaults              # 默认配置文件
+├── sdkconfig.old                   # 配置备份文件
+├── build_and_flash.sh              # 构建和烧录脚本
+├── LICENSE                         # 许可证文件 (CC BY-NC-SA 4.0)
+├── COPYRIGHT                       # 版权声明
+├── HARDWARE_SPECIFICATION.md       # 硬件规格说明文档
+├── software_requirements.md        # 软件需求文档
+├── test_project.md                 # 项目测试文档
+├── .gitignore                      # Git 忽略文件配置
+└── README.md                       # 项目说明文档
 ```
+
+### 核心模块说明
+
+| 模块             | 文件                   | 功能描述                     |
+| ---------------- | ---------------------- | ---------------------------- |
+| **音频处理**     | `audio_delay.c/h`      | I2S 音频采集、延迟处理、输出 |
+| **音频编解码器** | `es8388_driver.c/h`    | ES8388 芯片驱动，I2C 控制    |
+| **用户输入**     | `ec11_encoder.c/h`     | 旋转编码器输入处理           |
+| **显示输出**     | `oled_display.c/h`     | OLED 屏幕显示控制            |
+| **界面管理**     | `ui_manager.c/h`       | 用户界面逻辑和状态管理       |
+| **设置管理**     | `settings_manager.c/h` | 配置存储和恢复               |
+| **主程序**       | `main.c`               | 系统初始化和任务调度         |
 
 ## 故障排除
 
