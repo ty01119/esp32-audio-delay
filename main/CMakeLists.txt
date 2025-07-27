@@ -1,0 +1,21 @@
+# Main component CMakeLists.txt
+idf_component_register(
+    SRCS
+        "main.c"
+        "audio_delay.c"
+        "ec11_encoder.c"
+        "oled_display.c"
+        "settings_manager.c"
+        "ui_manager.c"
+        "es8388_driver.c"
+    INCLUDE_DIRS
+        "include"
+    REQUIRES
+        driver
+        esp_adc
+        nvs_flash
+        spi_flash
+        esp_driver_i2c
+        esp_driver_i2s
+        esp_timer
+)

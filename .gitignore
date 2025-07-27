@@ -1,0 +1,163 @@
+# ESP-IDF Build System
+build/
+sdkconfig
+sdkconfig.old
+dependencies.lock
+
+# ESP-IDF Managed Components
+managed_components/
+
+# ESP-IDF Python Environment
+.venv/
+venv/
+
+# ESP-IDF Tools
+tools/
+
+# Compilation Database
+compile_commands.json
+
+# Flash Arguments
+flash_project_args
+flash_app_args
+flash_bootloader_args
+flash_partition_table_args
+
+# Bootloader
+bootloader/
+
+# Partition Table
+partition_table/
+
+# Application Binary
+*.bin
+*.elf
+*.map
+
+# ESP-IDF Logs
+*.log
+logs/
+
+# ESP-IDF Cache
+.cache/
+
+# ESP Monitor
+monitor.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Virtual Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Temporary Files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Documentation Build
+docs/_build/
+docs/doxygen-warning-log.txt
+docs/sphinx-warning-log.txt
+
+# Test Results
+test_results/
+*.xml
+
+# Hardware Design Files (if any)
+*.brd.bak
+*.sch.bak
+*.pro.user
+
+# Simulation Files
+*.sim
+*.wdb
+
+# Custom Build Scripts Output
+*.out
+
+# ESP-IDF Component Manager
+dependencies.lock
+
+# Local Configuration
+local_config.h
+local_settings.h
+
+# Debug Files
+*.dmp
+*.pdb
+
+# Archive Files
+*.zip
+*.tar.gz
+*.rar
+
+# Ignore specific image files that might be temporary
+*.png.bak
+*.jpg.bak
+*.jpeg.bak
+
+# Keep important documentation images
+!README_images/
+!docs/images/
+
+# Node.js (if using any web tools)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Kconfig
+.config
+.config.old
+
+# ESP-IDF specific
+idf_component_tools.lock
+idf_component_manager.lock
