@@ -397,4 +397,22 @@ idf.py monitor
 
 ## 许可证
 
-本项目基于 MIT 许可证开源。
+本项目基于 **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License** 开源。
+
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+### 许可证说明
+
+- ✅ **允许**：个人使用、学习、研究、教育用途
+- ✅ **允许**：修改和分发（需署名）
+- ❌ **禁止**：商业用途
+- ⚠️ **要求**：衍生作品必须使用相同许可证
+- ⚠️ **要求**：必须署名原作者
+
+### 商业使用
+
+如需商业使用，请联系作者获得商业许可。
+
+---
+
+**注意**：此许可证仅适用于本项目的软件代码和文档。硬件设计图纸和原理图同样适用此许可证。

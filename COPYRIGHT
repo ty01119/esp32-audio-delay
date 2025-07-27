@@ -1,0 +1,17 @@
+ESP32 Audio Delay Project
+Copyright (c) 2025 [Your Name]
+
+This project is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+
+COMMERCIAL USE IS PROHIBITED without explicit written permission from the author.
+
+For commercial licensing inquiries, please contact: [your-email@example.com]
+
+Components and their licenses:
+- ESP-IDF: Apache License 2.0
+- FreeRTOS: MIT License  
+- Hardware design: CC BY-NC-SA 4.0
+- Software code: CC BY-NC-SA 4.0
+- Documentation: CC BY-NC-SA 4.0
+
+Third-party components retain their original licenses.
